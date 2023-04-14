@@ -1,3 +1,5 @@
+import 'dart:ui';
+
 import 'package:flutter/material.dart';
 import 'package:flutter_osm_plugin/flutter_osm_plugin.dart';
 
@@ -28,7 +30,6 @@ class MyHomePage extends StatefulWidget {
 class _MyHomePageState extends State<MyHomePage> {
   late MapController _controller;
 
-
   @override
   void initState() {
     super.initState();
@@ -41,10 +42,7 @@ class _MyHomePageState extends State<MyHomePage> {
         west: 5.9559113,
       ),
     );
-    
   }
-
-  
 
   @override
   void dispose() {
@@ -57,7 +55,14 @@ class _MyHomePageState extends State<MyHomePage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Flutter OpenStreetMap Example'),
+        backgroundColor: Colors.green,
+        title: const Text(
+          'Hariyali',
+          style: TextStyle(
+            fontSize: 25,
+          ),
+        ),
+        centerTitle: true,
       ),
       body: Column(
         children: [
